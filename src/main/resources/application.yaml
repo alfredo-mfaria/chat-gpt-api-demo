@@ -1,0 +1,20 @@
+server:
+  port: 8123
+
+chatgpt:
+  api:
+    url: https://api.openai.com/v1/engines/text-davinci-003
+    key: ${GPT_API_KEY}
+
+github:
+  orgName: leanix
+  access:
+    token: ${GITHUB_PAT}
+
+spring:
+  cloud:
+    openfeign:
+      httpclient:
+        connection-timeout: 300000
+        ok-http:
+          read-timeout: 300000
